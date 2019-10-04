@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %} <!--extends the html already input in the base.html file-->
     <head>
         <style>
             .error {
@@ -7,7 +6,7 @@
             }
         </style>
     </head>
-    <body>
+    {% block content %}
         <h1>Please Sign Up Below</h1>
         <form method='POST'>
             <label>Username
@@ -28,5 +27,5 @@
             <p class="error">{{email_error}}</p>
             <input type="submit" value="Sign Up" />
         </form>
-    </body>
+    {% endblock %}
 </html>

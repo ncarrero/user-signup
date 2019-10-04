@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
+{% extends 'base.html' %} <!--extends the html already input in the base.html file-->
+
+{% block content %}
+<head>
         <style>
         h1 {
             color: blue;
@@ -9,5 +10,4 @@
     </head>
     <body>
         <h1>Welcome, {{username}} !</h1>
-    </body>
-</html>
+{% endblock %}

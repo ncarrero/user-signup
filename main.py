@@ -1,5 +1,3 @@
-#need to make email optional and display username in welcome message
-
 from flask import Flask, request, redirect, render_template
 
 app = Flask(__name__)
@@ -56,7 +54,7 @@ def validate(): #pull out and validate data user input in the form
     if not username_error and not password_error and not verify_password_error and not email_error:
         return render_template('welcome.html', username = username)
     else:
-        return render_template('index.html', username=username,
+        return render_template('index.html', title = "Log In", username=username,
         username_error = username_error, password = password, password_error = password_error,
         verify_password = verify_password, verify_password_error = verify_password_error, 
         email = email, email_error = email_error)
